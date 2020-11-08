@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Feed Emoji!!</h1>
+        <div class="face waffle">
+            <div class="eyes">
+                <span class="eye"></span>
+                <span class="eye"></span>
+            </div>
+        </div>
+        <div class="face crepe">
+            <div class="eyes">
+                <span class="eye"></span>
+                <span class="eye"></span>
+            </div>
+        </div>
+        <div class="face pancake">
+            <div class="eyes">
+                <span class="eye"></span>
+                <span class="eye"></span>
+            </div>
+        </div>
+        <div class="foods">
+            <img class="food" onclick="changeCursor('Image/crepe.png')"  id="crepe" src="Image/crepe.png" />
+            <img class="food" onclick="changeCursor('Image/pancake.png')"  id="pancake" src="Image/pancake.png" />
+            <img class="food" onclick="changeCursor('Image/waffle.png')"  id="waffle" src="Image/waffle.png" />
+            <img class="food" onclick="changeCursor('Image/bomb.png')"  id="bomb" src="Image/bomb.png" />
+        </div>
+    </div>
+    <script type="text/javascript">
+        console.log(document.body.style.cursor)
+        function changeCursor(image) {
+            console.log(image)
+            document.body.style.cursor = `url(${image}), pointer`;
+            if(image === 'Image/bomb.png') {
+                console.log(true)
+                var face = document.querySelectorAll(".face");
+                face.forEach(function (face) {
+                    face.classList.add("shaking");
+                })
+            }
+            else {
+                var face = document.querySelectorAll(".face");
+                    face.forEach(function (face) {
+                        face.classList.remove("shaking");
+                    })
+            }
+        }
+
+        
+        document.querySelector("body").addEventListener('mousemove', moveEyeball);
+        function moveEyeball() {
+            if(document.body.style.cursor) {
+                var eye = document.querySelectorAll(".eye");
+                eye.forEach(function (eye) {
+                    let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+                    let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+                    let radian = Math.atan2(event.pageX - x, event.pageY -y);
+                    let rot = (radian * (180 / Math.PI) * -1) + 270;
+                    eye.style.transform = "rotate("+ rot + "deg)";
+                })
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+
+    text-decoration: none;
+}
+li {
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+    font-size: 30px;
+    transform: rotate(-35deg) skew(20deg);
+    background-color: black;
+    cursor: pointer;
+}
+
+.fab {
+    color: white
+}
+
+.fa-github-alt {
+    color: black;
+}
+
+li:nth-child(1) {
+    background-color: #097ceb;
+}
+li:nth-child(2) {
+    background-color: black; 
+}
+
+li:nth-child(3) {
+    background-color: #50abf1; 
+}
+
+li:nth-child(4) {
+    background-color: red; 
+}
+
+li:nth-child(5) {
+    background-color: #0a66c2; 
+}
+
+li:nth-child(6) {
+    background-color: yellow; 
+}
+
+li i:nth-child(5) {
+    transform: translate(50px, -50px);
+    opacity: 1;
+}
+
+li:hover {
+    animation: animate 0.65s linear forwards;
+    /* transform: translate(0, -50px) rotate(-35deg) skew(20deg); */
+    /* transition: 0.5s; */
+}
+li:hover span:nth-child(4) {
+    transform: translate(40px, -40px);
+    opacity: 0.8;
+    
+}
+
+
+@keyframes animate {
+    00% { transform: translate(0, 0px) rotate(-35deg) skew(20deg); }
+    25% { transform: translate(0, -50px) rotate(-35deg) skew(20deg); }
+    50% { transform: translate(0, 0px) rotate(-35deg) skew(20deg); }
+    100% { transform: translate(0, -50px) rotate(-35deg) skew(20deg); }
+}

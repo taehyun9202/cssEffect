@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+        <video src="video.mp4" autoplay="" muted="" loop=""></video>
+        <div class="cover"></div>
+    </div>
+    <script text="text/javascript">
+        let cover = document.querySelector('.cover')
+        window.addEventListener("scroll", function() {
+            let value = window.scrollY;
+            cover.style.backgroundSize = 100 + value*2 + 'px';
+
+        })
+    </script>
+</body>
+</html>

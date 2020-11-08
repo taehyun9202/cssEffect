@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title">Scroll down</h1>
+    <section>
+        <video src="video2.mp4" autoplay loop muted></video>
+    </section>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero orci, pharetra et faucibus vel, ullamcorper a ante. Nulla nec tincidunt erat. Cras vitae sollicitudin lacus. Donec sollicitudin nec leo vitae maximus. Sed justo leo, eleifend sed lorem a, vestibulum ultricies nisi. Nam sagittis diam ut eleifend blandit. Phasellus auctor eget orci ac pretium. Nam rhoncus tempus augue, id sagittis nulla. Nam ullamcorper consequat mauris, sed congue orci mollis quis. Morbi sed felis ullamcorper est mattis dapibus quis id elit. Aliquam massa magna, iaculis sed diam eu, pharetra suscipit eros. Morbi ac tempor massa, fermentum ultricies dui. Fusce sed nulla at nisi hendrerit mollis sed quis nisl. Ut facilisis bibendum mauris. Ut est dolor, hendrerit fringilla luctus a, tempor et diam. Fusce convallis orci tellus. Ut velit turpis, condimentum et elementum quis, mollis vel eros. Fusce ligula massa, placerat ut odio sed, rhoncus iaculis risus. Maecenas varius faucibus urna non commodo. Nunc id efficitur nisi, eu ultrices ex. Nulla varius ex mi, sed dapibus lectus mattis eu. Curabitur dapibus elementum augue. Donec vitae ex aliquam augue posuere consequat eget non tortor. Cras interdum bibendum dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus mauris sapien, dapibus in massa ultrices, suscipit accumsan eros. Etiam tincidunt iaculis pellentesque. Mauris ac odio lorem. Curabitur turpis nibh, imperdiet et ex a, convallis pulvinar tortor. Aliquam eu mi sit amet urna sodales blandit. Nulla ac sollicitudin velit, dapibus blandit metus. Nullam at lectus non enim laoreet bibendum. Phasellus sed enim dapibus, posuere justo quis, iaculis dui. Morbi nec mauris vestibulu
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero orci, pharetra et faucibus vel, ullamcorper a ante. Nulla nec tincidunt erat. Cras vitae sollicitudin lacus. Donec sollicitudin nec leo vitae maximus. Sed justo leo, eleifend sed lorem a, vestibulum ultricies nisi. Nam sagittis diam ut eleifend blandit. Phasellus auctor eget orci ac pretium. Nam rhoncus tempus augue, id sagittis nulla. Nam ullamcorper consequat mauris, sed congue orci mollis quis. Morbi sed felis ullamcorper est mattis dapibus quis id elit. Aliquam massa magna, iaculis sed diam eu, pharetra suscipit eros. Morbi ac tempor massa, fermentum ultricies dui. Fusce sed nulla at nisi hendrerit mollis sed quis nisl. Ut facilisis bibendum mauris. Ut est dolor, hendrerit fringilla luctus a, tempor et diam. Fusce convallis orci tellus. Ut velit turpis, condimentum et elementum quis, mollis vel eros. Fusce ligula massa, placerat ut odio sed, rhoncus iaculis risus. Maecenas varius faucibus urna non commodo. Nunc id efficitur nisi, eu ultrices ex. Nulla varius ex mi, sed dapibus lectus mattis eu. Curabitur dapibus elementum augue. Donec vitae ex aliquam augue posuere consequat eget non tortor. Cras interdum bibendum dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus mauris sapien, dapibus in massa ultrices, suscipit accumsan eros. Etiam tincidunt iaculis pellentesque. Mauris ac odio lorem. Curabitur turpis nibh, imperdiet et ex a, convallis pulvinar tortor. Aliquam eu mi sit amet urna sodales blandit. Nulla ac sollicitudin velit, dapibus blandit metus. Nullam at lectus non enim laoreet bibendum. Phasellus sed enim dapibus, posuere justo quis, iaculis dui. Morbi nec mauris vestibulu
+        </p>
+    </div>
+    <script type="text/javascript">
+        var section = document.querySelector('section');
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY
+            console.log(value)
+            section.style.clipPath = `circle(${value}px at center)`;
+            console.log(section.style.clipPath)
+        })
+    </script>
+</body>
+</html>
