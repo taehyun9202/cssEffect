@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="running">
+            <div class="dot"></div>
+            <div class="character"></div>
+        </div>
+        <a class="button">
+           <span class="border"></span>
+           <span class="border"></span>
+           <span class="border"></span>
+           <span class="border"></span>
+           Start
+        </a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+        $('.button').on('click', function(e) {
+            e.preventDefault();
+            $('.character').css('animation', 'charRunning .5s steps(6) infinite');
+            $('.dot').css('animation', 'roadAnimate 2s infinite linear');
+        })
+    </script>
+</body>
+</html>

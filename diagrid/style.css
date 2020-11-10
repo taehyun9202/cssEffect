@@ -1,0 +1,109 @@
+.container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+    width: 100%;
+    height: 100vh;
+}
+ul {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li {
+    list-style: none;
+}
+
+.grid {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg);
+    z-index: 100;
+    /*  */
+    overflow: hidden;
+    /*  */
+}
+
+.grid:nth-child(1) {
+    top: -80px;
+    left: 70px;
+}
+
+.grid:nth-child(2) {
+    top: 70px;
+    left: 20px;
+}
+
+.grid:nth-child(3) {
+    top: -80px;
+    left: -30px;
+}
+
+.grid:nth-child(4) {
+    top: 70px;
+    left: -80px;
+}
+
+.grid:nth-child(5) {
+    top: -80px;
+    left: -130px;
+}
+.bg {
+    color: white;
+    transform: rotate(-45deg) scale(1.45);
+}
+
+.bg1 {
+    background: url(image/image1.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+.bg2 {
+    background: url(image/image2.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+.bg3 {
+    background: url(image/image3.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+.bg4 {
+    background: url(image/image4.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+.bg5 {
+    background: url(image/image5.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center;
+}

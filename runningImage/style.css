@@ -1,0 +1,181 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    min-width: 1000px;
+}
+
+.running {
+    width: 800px;
+    height: 150px;
+    background-color: rgb(156, 156, 156);
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(30deg);
+}
+
+.dot {
+    content: '';
+    width: 800px;
+    height: 20px;
+    position: absolute;
+    top: 65px;
+    background: linear-gradient(90deg, white 0%, white 60%,  rgb(156, 156, 156) 60%,  rgb(156, 156, 156) 100%);
+    background-size: 150px;
+}
+
+
+@keyframes roadAnimate {
+    from { 
+        background-position-x: 0;
+    }
+    to { 
+        background-position-x: -1600px;
+    }
+}
+
+.running::after {
+    content: '';
+    width: 800px;
+    height: 20px;
+    position: absolute;
+    background-color: rgb(130, 130, 130);
+    top: 150px;
+    transform-origin: top;
+    transform: perspective(500px) rotateX(-25deg);
+}
+
+.character {
+    position: relative;
+    height: 256px;
+    background: url(spritestrip.png);
+    width: calc(1536px / 6);
+    transform: perspective(500px) rotateX(-25deg) translateY(-150px);
+    -webkit-box-reflect: below 1px linear-gradient(transparent 90%, #0004);
+}
+
+.character .active {
+    animation: charRunning .5s steps(6) infinite;
+}
+
+@keyframes charRunning {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: -1536px;
+    }
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 75px);
+    top: 70%;
+    height: 50px;
+    width: 150px;
+    background-color: indigo;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+a:hover{
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+a span {
+    display: block;
+    position: absolute;
+    background: white;
+}
+
+a span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+a span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+a span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.5s;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+a span:nth-child(4) {
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.5s;
+    animation: glow 1s ease-in-out infinite alternate;
+}
