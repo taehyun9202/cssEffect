@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #0e0e0e;
+    flex-direction: column;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.text h2 {
+    position: relative;
+    text-align: center;
+    /* text-transform: uppercase; */
+    font-weight: 900;
+    font-size: 5em;
+    line-height: 0.1em;
+    letter-spacing: 4px;
+    color: #222;
+}
+
+
+.first {
+    position: relative;
+    z-index: 1;
+    color: white;
+    animation: animate_name 5s linear infinite;
+}
+
+.last {
+    position: relative;
+    z-index: 1;
+    color: white;
+    animation: animate_last 1s linear infinite;
+    animation-delay: 2s;
+}
+
+.port {
+    position: relative;
+    z-index: 1;
+    color: white;
+    animation: animate_port 5s linear infinite;
+    /* transition-delay: calc(0.1s * var(--i)) */
+}
+
+.hi {
+    position: relative;
+    z-index: 1;
+    color: #f0ffff;
+    text-shadow: 0 0 10px #f0ffff,
+                     0 0 20px #f0ffff,
+                     0 0 40px #f0ffff,
+                     0 0 80px #f0ffff,
+                     0 0 160px #f0ffff
+}
+
+.dob {
+    position: relative;
+    z-index: 1;
+    color: white;
+    animation: animate_dob 7s linear infinite
+}
+
+.on {
+    position: relative;
+    z-index: 1;
+    color: white;
+    animation: animate_on 3s linear infinite
+}
+
+@keyframes animate_name {
+    0%, 5%, 10.1%, 15.1%, 25.1%, 45%, 70.1%, 90%, 100%{
+        color: #222;
+        text-shadow: 0 0 0 #222;
+    }
+    5.1%, 10%, 15.2%, 25%, 45.1%, 70%, 90.1%, 95% {
+        color: #fff;
+        text-shadow: 0 0 10px #ff3177,
+                     0 0 20px #ff3177,
+                     0 0 40px #ff3177,
+                     0 0 80px #ff3177,
+                     0 0 160px #ff3177
+    }
+}
+
+@keyframes animate_dob {
+    0%, 5%, 10.1%, 15.1%, 25.1%, 45%, 70.1%, 90%, 100%{
+        color: #222;
+        text-shadow: 0 0 0 #222;
+    }
+    5.1%, 10%, 15.2%, 25%, 45.1%, 70%, 90.1%, 95% {
+        color: #fff;
+        text-shadow: 0 0 10px #9900ff,
+                     0 0 20px #9900ff,
+                     0 0 40px #9900ff,
+                     0 0 80px #9900ff,
+                     0 0 160px #9900ff
+    }
+}
+
+@keyframes animate_last {
+    0%, 5%, 10.1%, 15.1%, 25.1%, 45%, 70.1%, 90%, 100%{
+        color: #222;
+        text-shadow: 0 0 0 #222;
+    }
+    5.1%, 10%, 15.2%, 25%, 45.1%, 70%, 90.1%, 95% {
+        color: #fff;
+        text-shadow: 0 0 10px black,
+                     0 0 20px black,
+                     0 0 40px black,
+                     0 0 80px black,
+                     0 0 160px black
+    }
+}
+
+@keyframes animate_port {
+    0%, 56%, 78%, 85% {
+        color: #222;
+        text-shadow: 0 0 0 #222;
+    }
+    1%, 55%, 77%, 84%, 100% {
+        color: #fff;
+        text-shadow: 0 0 10px #00FA9A,
+                     0 0 20px #00FA9A,
+                     0 0 40px #00FA9A,
+                     0 0 80px #00FA9A,
+                     0 0 160px #00FA9A
+    }
+}
+
+@keyframes animate_on {
+    0%, 56%, 78%, 85% {
+        color: #222;
+        text-shadow: 0 0 0 #222;
+    }
+    1%, 55%, 77%, 84%, 100% {
+        color: #fff;
+        text-shadow: 0 0 10px #f0ffff,
+                     0 0 20px #f0ffff,
+                     0 0 40px #f0ffff,
+                     0 0 80px #f0ffff,
+                     0 0 160px #f0ffff
+    }
+}
