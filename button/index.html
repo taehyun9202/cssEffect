@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input class="button" onclick="myFunction()" type="checkbox">
+    </div>
+    <script>
+        function myFunction() {
+            // Get the checkbox
+            var checkBox = document.querySelector(".button");
+            // Get the output text
+            // If the checkbox is checked, display the output text
+            if (checkBox.checked == true){
+                console.log("checked")
+            } else {
+                console.log("unchecked")
+            }
+        }
+    </script>
+</body>
+</html>
