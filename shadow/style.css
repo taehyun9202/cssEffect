@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(#000, #262626);
+    /* z-index: 10; */
+}
+
+.box::before, .box::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg, #0000ff, #00ff00, #ffff00, #ff0000, #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+.box::after {
+    filter: blur(15px);
+}
+@keyframes animate {
+    0% { 
+        background-position: 0 0;
+    }
+
+    50% { 
+        background-position: 400% 0;
+    }
+
+    100% { 
+        background-position: 0% 0;
+    }
+}
