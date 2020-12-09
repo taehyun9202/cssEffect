@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(img.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size:100% 100%; 
+    background-position: center;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: url(img.jpg);
+    background-attachment: fixed;
+    box-shadow: 20px 0 100px rgba(0, 0, 0, 0.2),
+                -20px 0 100px rgba(0, 0, 0, 0.2);
+    /* transform: scale(1.2); */
+    background-size: 120%;
+    background-position: 20% 60%;
+    animation: animate 5s ease-in-out infinite;   
+}
+
+@keyframes animate {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 250px)
+    }
+}
