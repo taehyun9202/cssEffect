@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loader1.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="loader"></div>
+        <div class="counter">0</div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var count = 0;
+            var counter = setInterval(function() {
+                if(count < 101) {
+                    $('.counter').text(count + "%");
+                    $('.loader').css('width', count + "%");
+                    count++
+                }
+                else {
+                    clearInterval(counter)
+                }
+            }, 60)
+        })
+    </script>
+</body>
+</html>
