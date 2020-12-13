@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+    <section>
+        <h2>Hello</h2>
+        <p>What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</p>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+        function counter() {
+            var count = setInterval(function() {
+                var c = parseInt($('.counter').text());
+                $('.counter').text((++c).toString());
+                if( c == 100 ) {
+                    clearInterval(count);
+                    $('.counter').addClass('hide')
+                    $('.preloader').addClass('active')
+                }
+            }, 60)
+        }
+        counter()
+    </script>
+</body>
+</html>
