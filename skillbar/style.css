@@ -26,7 +26,12 @@ body {
     background: linear-gradient(#616161 0%, #333333 10%, #222222); 
     border-radius: 10px;
     overflow: hidden;
-    border: 2px solid black
+    border: 2px solid black;
+    cursor: move;
+}
+
+.container .skills.over {
+    border: 2px dotted white;
 }
 
 .container .skills::before {

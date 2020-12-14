@@ -9,35 +9,35 @@
 <body>
     <div class="container">
         <h2>Skills Bar</h2>
-        <div class="skills">
+        <div class="skills" draggable="true">
             <span class="name">Html</span>
             <div class="percent">
                 <div class="progress" style="width: 95%;"></div>
             </div>
             <span class="value">95%</span>
         </div>
-        <div class="skills">
+        <div class="skills" draggable="true">
             <span class="name">CSS</span>
             <div class="percent">
                 <div class="progress" style="width: 90%;"></div>
             </div>
             <span class="value">90%</span>
         </div>
-        <div class="skills">
+        <div class="skills" draggable="true">
             <span class="name">Javascript</span>
             <div class="percent">
                 <div class="progress" style="width: 85%;"></div>
             </div>
             <span class="value">85%</span>
         </div>
-        <div class="skills">
+        <div class="skills" draggable="true">
             <span class="name">React</span>
             <div class="percent">
                 <div class="progress" style="width: 80%;"></div>
             </div>
             <span class="value">80%</span>
         </div>
-        <div class="skills">
+        <div class="skills" draggable="true">
             <span class="name">Python</span>
             <div class="percent">
                 <div class="progress" style="width: 75%;"></div>
@@ -45,5 +45,70 @@
             <span class="value">75%</span>
         </div>
     </div>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', (event) => {
+
+            var dragSrcEl = null;
+
+            function handleDragStart(e) {
+                this.style.opacity = '0.4';
+                
+                dragSrcEl = this;
+
+                e.dataTransfer.effectAllowed = 'move';
+                e.dataTransfer.setData('text/html', this.innerHTML);
+            }
+
+            function handleDragOver(e) {
+                if (e.preventDefault) {
+                    e.preventDefault();
+                }
+
+                e.dataTransfer.dropEffect = 'move';
+                
+                return false;
+            }
+
+            function handleDragEnter(e) {
+                this.classList.add('over');
+            }
+
+            function handleDragLeave(e) {
+                this.classList.remove('over');
+            }
+
+            function handleDrop(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation(); // stops the browser from redirecting.
+                }
+            
+                if (dragSrcEl != this) {
+                    dragSrcEl.innerHTML = this.innerHTML;
+                    this.innerHTML = e.dataTransfer.getData('text/html');
+                }
+            
+                return false;
+            }
+
+            function handleDragEnd(e) {
+                this.style.opacity = '1';
+                
+                items.forEach(function (item) {
+                    item.classList.remove('over');
+                });
+            }
+
+            let items = document.querySelectorAll('.container .skills');
+            items.forEach(function(item) {
+                item.addEventListener('dragstart', handleDragStart, false);
+                item.addEventListener('dragenter', handleDragEnter, false);
+                item.addEventListener('dragover', handleDragOver, false);
+                item.addEventListener('dragleave', handleDragLeave, false);
+                item.addEventListener('drop', handleDrop, false);
+                item.addEventListener('dragend', handleDragEnd, false);
+            });
+        });
+    </script>
 </body>
 </html>
