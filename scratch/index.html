@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="scratch"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="wScratchPad.min.js"></script>
+    <script type="text/javascript">
+    $('#scratch').wScratchPad({
+        size        : 100,          // The size of the brush/scratch.
+        bg          : 'img.jpg',  // Background (image path or hex color).
+        fg          : '#000000',  // Foreground (image path or hex color).
+        realtime    : true,       // Calculates percentage in realitime.
+        scratchDown : null,       // Set scratchDown callback.
+        scratchUp   : null,       // Set scratchUp callback.
+        scratchMove : null,       // Set scratcMove callback.
+        cursor      : 'crosshair' // Set cursor.
+    });
+    </script>
+</body>
+</html>
