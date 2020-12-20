@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 220px;
+    /* background: linear-gradient(0deg, black,); */
+}
+
+li {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+}
+
+label {
+    position: relative;
+    cursor: pointer;
+}
+
+label input {
+    -webkit-appearance: none;
+    position: relative;
+}
+
+label .box {
+    position: relative;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label i {
+    position: absolute;
+    color: white;
+}
+
+label input:checked ~ .box {
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(33, 156, 253, 0.5),
+                0 0 20px rgba(33, 156, 253, 0.5),
+                0 0 40px rgba(33, 156, 253, 0.5),
+                0 0 80px rgba(33, 156, 253, 0.5),
+                0 0 160px rgba(33, 156, 253, 0.5);
+
+}
+
+label input:checked ~ .box i {
+    color: white;
+    text-shadow: 0 0 10px rgba(33, 156, 253, 0.5),
+                0 0 20px rgba(33, 156, 253, 0.5),
+                0 0 40px rgba(33, 156, 253, 0.5),
+                0 0 80px rgba(33, 156, 253, 0.5),
+                0 0 160px rgba(33, 156, 253, 0.5);
+}
