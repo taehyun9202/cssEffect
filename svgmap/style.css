@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#path474:hover {
+    fill: black !important;
+}
+
+#path526:hover {
+    fill: blue !important;
+}
+
+
+#path534:hover {
+    fill: yellow !important;
+}
+
+#path566:hover {
+    fill: green !important;
+}
+
+#path24:hover {
+    fill: red !important;
+}
+
+#path414:hover {
+    fill: ivory !important;
+}
+
+path.active {
+    fill: black !important;
+}
