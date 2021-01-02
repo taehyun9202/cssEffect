@@ -13,8 +13,23 @@ body {
 }
 
 
+path {
+    stroke: black !important;
+    stroke-dasharray: 0 !important;
+    stroke-width: 10 !important;
+}
+
+path:hover {
+    cursor: pointer;
+}
+
+#path14:hover {
+    cursor: default;
+}
+
 #path474:hover {
     fill: black !important;
+    animation: animate-heart 2s linear forwards;
 }
 
 #path526:hover {
