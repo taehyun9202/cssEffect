@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #03a9f4;
+}
+
+.btn {
+    position: relative;
+    padding: 15px 20px;
+    background-color: white;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    letter-spacing: 2px;
+}
+
+#popup {
+    position: fixed;
+    top: -1000px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: white;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+#popup.active {
+    visibility: visible;
+    top: 50%;
+}
+
+#popup .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#popup .content h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+
+#popup .content p {
+    text-align: center;
+    font-size: 16px;
+}
+
+#popup .content .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup .content .inputBox input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+}
+
+#popup .content .inputBox input[type="submit"] {
+    max-width: 150px;
+    background-color: #03a9f4;
+    color: white;
+    border: none;   
+}
+
+.close {
+    position: absolute;
+    top: -60px;
+    right: -30px;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.close:hover {
+    transform: scale(1.1);
+}
