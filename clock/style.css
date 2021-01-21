@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    background-color: #091921;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #091921;
+    border-radius: 50%;
+    border: 4px solid #091921;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+                inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+                0 15px 15px rgba(0, 0, 0, 0.3),
+                inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.clock .number {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    text-align: center;
+    position: absolute;
+    height: 380px;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgba(190,190,190, 0.7);
+    transform: rotate(calc(var(--i)*30deg));
+}
+
+.clock::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    z-index: 1000;
+    background-color: rgba(190,190,190, 1);
+}
+
+.clock .hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom;
+}
+
+.clock .hour {
+    width: 10px;
+    height: 100px;
+    background-color: tomato;
+    top: 290px;
+    z-index: 120;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /* transform: rotate(90deg); */
+}
+
+.clock .minute {
+    width: 6px;
+    height: 150px;
+    background-color: tomato;
+    top: 240px;
+    z-index: 110;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    transform-origin: bottom;
+    transform: rotate(90deg);
+}
+
+.clock .second {
+    width: 4px;
+    height: 180px;
+    background-color: black;
+    top: 210px;
+    z-index: 100;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    transform-origin: bottom;
+}
+
+.clock .second::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    z-index: 100;
+    width: 4px;
+    top: 180px;
+    height: 40px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.clock .second::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    z-index: 100;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    top: 220px;
+}
