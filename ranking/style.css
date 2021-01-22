@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rank {
+    position: relative;
+    background-color: transparent;
+    width: 600px;
+    max-width: 80%;
+    min-height: 50%;
+    overflow-y: scroll;
+
+}
+
+.bar {
+    position: absolute;
+    left: 0px;
+    transition: top 1s;
+    color: white;
+}
+
+.label {
+    position: absolute;
+    color: black;
+    top: 14px;
+    left: 25px;
+}
