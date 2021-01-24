@@ -1,0 +1,86 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: block;
+    text-align: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.img {
+    position: absolute;
+    left: 100px;
+    width: 200px;
+    height: 200px;
+    
+    display: none;
+}
+
+.img1 {
+    background-color: white;
+}
+
+.img2 {
+    background-color: black;
+}
+
+.img3 {
+    background-color: blue;
+}
+
+.btn {
+    position: relative;
+    top: 220px;
+}
+
+label[for*="tab"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[id="tab1"]:checked ~ .img1 {
+    display: block;
+}
+
+input[id="tab2"]:checked ~ .img2 {
+    display: block;
+}
+
+input[id="tab3"]:checked ~ .img3 {
+    display: block;
+}
+
+input[id="tab1"]:checked ~ .btn > label[for="tab1"] {
+    background-color: tomato;
+}
+
+input[id="tab2"]:checked ~ .btn > label[for="tab2"] {
+    background-color: tomato;
+}
+
+input[id="tab3"]:checked ~ .btn > label[for="tab3"] {
+    background-color: tomato;
+}
+
