@@ -1,0 +1,223 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg#Layer_1 {
+    height:150px;
+    width: 70%;
+}
+
+path {
+    stroke-width: 3px;
+    stroke: black;
+    fill: transparent;
+}
+
+#path1 {
+    animation: animate1 1s linear forwards;
+}
+
+
+@keyframes animate1 {
+    0% { 
+        stroke-dasharray: 900;
+        stroke-dashoffset: 900;
+    }
+    100% { 
+        stroke-dasharray: 900;
+        stroke-dashoffset: 455;
+    }
+}
+
+#path2 {
+    animation: animate2 1s forwards;
+    animation-delay: 1s;
+    visibility: hidden;
+}
+
+@keyframes animate2 {
+    0% { 
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+        visibility: visible;
+    }
+    100% { 
+        stroke-dasharray: 800;
+        stroke-dashoffset: 400;
+        visibility: visible;
+    }
+}
+
+#path3 {
+    animation: animate3 1s forwards;
+    animation-delay: 2s;
+    visibility: hidden;
+}
+
+@keyframes animate3 {
+    0% { 
+        stroke-dasharray: 720;
+        stroke-dashoffset: 720;
+        visibility: visible;
+    }
+    100% { 
+        stroke-dasharray: 720;
+        stroke-dashoffset: 360;
+        visibility: visible;
+    }
+}
+
+#path4 {
+    animation: animate4 1s forwards;
+    animation-delay: 3s;
+    visibility: hidden;
+}
+
+@keyframes animate4 {
+    0% { 
+        stroke-dasharray: 900;
+        stroke-dashoffset: 900;
+        visibility: visible;
+    }
+    100% { 
+        stroke-dasharray: 900;
+        stroke-dashoffset: 475;
+        visibility: visible;
+    }
+}
+
+#path5 {
+    animation: animate5 1s forwards;
+    animation-delay: 4s;
+    visibility: hidden;
+}
+
+@keyframes animate5 {
+    0% { 
+        stroke-dasharray: 1100;
+        stroke-dashoffset: 1100;
+        visibility: visible;
+    }
+    100% { 
+        stroke-dasharray: 1100;
+        stroke-dashoffset: 600;
+        visibility: visible;
+    }
+}
+
+#left1 {
+    animation: left1 0.1s forwards;
+    animation-delay: 5s;
+    visibility: hidden;
+}
+
+@keyframes left1 {
+    0% { 
+        stroke-dasharray: 40;
+        stroke-dashoffset: 40;
+        visibility: visible;
+    }
+    100% { 
+        stroke-dasharray: 40;
+        stroke-dashoffset: 26;
+        visibility: visible;
+    }
+}
+
+#left2 {
+    animation: left1 0.1s forwards;
+    animation-delay: 5.1s;
+    visibility: hidden;
+}
+
+#left3 {
+    animation: left1 0.1s forwards;
+    animation-delay: 5.2s;
+    visibility: hidden;
+}
+
+
+#right1 {
+    animation: left1 0.1s forwards;
+    animation-delay: 5.3s;
+    visibility: hidden;
+}
+
+#right2 {
+    animation: left1 0.1s forwards;
+    animation-delay: 5.4s;
+    visibility: hidden;
+}
+
+#right3 {
+    animation: left1 0.1s forwards;
+    animation-delay: 5.5s;
+    visibility: hidden;
+}
+
+
+
+#nose {
+    animation: nose 1s forwards;
+    animation-delay: 6s;
+    visibility: hidden;
+}
+
+@keyframes nose {
+    0% { 
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        visibility: visible;
+    }
+    100% { 
+        stroke-dasharray: 100;
+        stroke-dashoffset: 64;
+        visibility: visible;
+    }
+}
+
+
+#lefteye {
+    visibility: hidden;
+    animation: eye 0.1s forwards;
+    animation-delay: 7s;
+}
+
+#righteye {
+    visibility: hidden;
+    animation: eye 0.1s forwards;
+    animation-delay: 7.2s;
+}
+
+@keyframes eye {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+
+.content {
+    display: none;
+    opacity: 0;
+    animation: animate 1s linear forwards
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
