@@ -1,0 +1,117 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 2300px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg#Layer_1 {
+    height:150px;
+    width: 70%;
+}
+
+path {
+    stroke-width: 3px;
+    stroke: black;
+    fill: transparent;
+}
+
+#path1 {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+}
+
+#path2 {
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+}
+
+#path3 {
+    stroke-dasharray: 720;
+    stroke-dashoffset: 720;
+}
+
+#path4 {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+}
+
+
+#path5 {
+    stroke-dashoffset: 1100;
+    stroke-dasharray: 1100;
+}
+
+
+#left1 {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+}
+
+
+#left2 {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+}
+
+#left3 {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+}
+
+
+#right1 {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+}
+
+#right2 {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+}
+
+#right3 {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+}
+
+#nose {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    /* stroke-dashoffset: 64; */
+}
+
+
+#lefteye {
+    visibility: hidden;
+}
+
+#righteye {
+    visibility: hidden;
+}
+
+
+.content {
+    display: none;
+    opacity: 0;
+    animation: animate 1s linear forwards
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
