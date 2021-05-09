@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <img id="background" alt="background" src="" />
+    </section>
+    <script src="rainyday.js"></script>
+    <script>
+      function rain() {
+        var image = document.getElementById("background");
+        image.onload = function () {
+          var engine = new RainyDay({
+            image: this,
+            blur: 0,
+            fps: 60,
+          });
+          //   engine.rain([[1, 2, 8000]]);
+          engine.rain([[5, 2, 2]], 70);
+        };
+        image.src = "bg.jpg";
+      }
+      rain();
+    </script>
+  </body>
+</html>
